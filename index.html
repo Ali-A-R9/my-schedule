@@ -10,7 +10,7 @@
   <body>
     <header class="topbar">
       <h1>My Schedule</h1>
-      <p class="subtitle">Build your weekly schedule visually — no login.</p>
+      <p class="subtitle">Build your weekly schedule visually - no login.</p>
     </header>
 
     <main class="app">
@@ -142,15 +142,15 @@
           <div id="eventMsg" class="msg" role="status" aria-live="polite"></div>
         </div>
       </section>
-      <div class="toolsRow">
-  <button id="exportBtn" class="secondary" type="button">Export JSON</button>
-  <label class="fileBtn secondary">
-    Import JSON
-    <input id="importFile" type="file" accept="application/json" hidden />
-  </label>
-  <button id="clearBtn" class="danger" type="button">Clear All</button>
-</div>
 
+      <div class="toolsRow">
+        <button id="exportBtn" class="secondary" type="button">Export JSON</button>
+        <label class="fileBtn secondary">
+          Import JSON
+          <input id="importFile" type="file" accept="application/json" hidden />
+        </label>
+        <button id="clearBtn" class="danger" type="button">Clear All</button>
+      </div>
 
       <!-- SCHEDULE -->
       <section class="schedule">
@@ -161,6 +161,6 @@
       <datalist id="timeSuggestions"></datalist>
     </main>
 
-    <script src="./app.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
