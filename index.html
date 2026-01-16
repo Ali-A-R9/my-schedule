@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Schedule</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <h1>My Schedule</h1>
+      <p class="subtitle">Build your weekly schedule visually — no login.</p>
+    </header>
+
+    <main class="app">
+      <!-- GRID SETTINGS -->
+      <section class="controls">
+        <!-- Top row -->
+        <div class="controlsTop">
+          <div class="control">
+            <label>Grid start</label>
+            <input
+              id="gridStart"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              list="timeSuggestions"
+              placeholder="12:00 AM"
+              value="12:00 AM"
+            />
+          </div>
+
+          <div class="control">
+            <label>Grid end</label>
+            <input
+              id="gridEnd"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              list="timeSuggestions"
+              placeholder="11:59 PM"
+              value="11:59 PM"
+            />
+          </div>
+
+          <div class="control">
+            <label>Grid lines (minutes)</label>
+            <select id="slotMinutes">
+              <option value="15">15</option>
+              <option value="30" selected>30</option>
+              <option value="60">60</option>
+            </select>
+          </div>
+
+          <div class="control">
+            <label>Week starts on</label>
+            <select id="weekStart">
+              <option value="Sun">Sunday</option>
+              <option value="Mon" selected>Monday</option>
+              <option value="Sat">Saturday</option>
+            </select>
+          </div>
+
+          <button id="buildGridBtn" class="primary">Build Grid</button>
+        </div>
+
+        <!-- Bottom row -->
+        <div class="controlsBottom">
+          <div class="control formatControl">
+            <label>Time format</label>
+            <div class="segmented" role="group" aria-label="Time format">
+              <button id="fmt24" type="button" class="segBtn">24h</button>
+              <button id="fmt12" type="button" class="segBtn active">12h</button>
+            </div>
+          </div>
+
+          <div class="control daysControl">
+            <label>Days to show</label>
+            <div class="daysGrid" id="daysGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENT PANEL -->
+      <section class="panel">
+        <div class="panelHeader">
+          <h2 class="panelTitle">Event</h2>
+          <p class="panelSubtitle">
+            Type any minute time (e.g., 11:39 AM → 12:37 PM). Click a block to edit/delete.
+          </p>
+        </div>
+
+        <div class="eventForm">
+          <div class="control wide">
+            <label>Title</label>
+            <input id="eventTitle" type="text" placeholder="e.g., Math 101" />
+          </div>
+
+          <div class="control">
+            <label>Day</label>
+            <select id="eventDay"></select>
+          </div>
+
+          <div class="control">
+            <label>Start</label>
+            <input
+              id="eventStart"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              list="timeSuggestions"
+              placeholder="9:00 AM"
+              value="9:00 AM"
+            />
+          </div>
+
+          <div class="control">
+            <label>End</label>
+            <input
+              id="eventEnd"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              list="timeSuggestions"
+              placeholder="10:00 AM"
+              value="10:00 AM"
+            />
+          </div>
+
+          <div class="control">
+            <label>Color</label>
+            <input id="eventColor" type="color" value="#4f46e5" />
+          </div>
+
+          <div class="eventButtons">
+            <button id="saveEventBtn" class="primary">Add Event</button>
+            <button id="cancelEditBtn" class="secondary" type="button">Cancel</button>
+            <button id="deleteEventBtn" class="danger" type="button">Delete</button>
+          </div>
+
+          <div id="eventMsg" class="msg" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+      <div class="toolsRow">
+  <button id="exportBtn" class="secondary" type="button">Export JSON</button>
+  <label class="fileBtn secondary">
+    Import JSON
+    <input id="importFile" type="file" accept="application/json" hidden />
+  </label>
+  <button id="clearBtn" class="danger" type="button">Clear All</button>
+</div>
+
+
+      <!-- SCHEDULE -->
+      <section class="schedule">
+        <div id="grid" class="grid" aria-label="Schedule grid"></div>
+      </section>
+
+      <!-- Suggestions for typing times -->
+      <datalist id="timeSuggestions"></datalist>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
