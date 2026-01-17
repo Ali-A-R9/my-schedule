@@ -18,6 +18,10 @@ import {
 
 window.addEventListener("DOMContentLoaded", () => {
   const els = getElements();
+  const year = new Date().getFullYear();
+  const footerCopy = document.getElementById("footerCopy");
+  if (footerCopy) footerCopy.textContent = `© ${year} Ali A-R9. All rights reserved.`;
+
 
   const state = {
     events: loadEvents(),

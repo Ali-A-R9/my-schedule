@@ -305,3 +305,12 @@ input[type="color"] {
   font-size: 12px;
 }
 .eventBlock.compact .eventMeta { display: none; }
+
+.footer {
+  margin-top: 18px;
+  padding: 14px 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+}
