@@ -43,7 +43,7 @@ export class App {
   init() {
     const year = new Date().getFullYear();
     const footerCopy = document.getElementById("footerCopy");
-    if (footerCopy) footerCopy.textContent = `© ${year} My Schedule.`;
+    if (footerCopy) footerCopy.textContent = `© ${year} ! K9 - My Schedule.`;
 
     const s = this.state.settings;
     this.state.gridConfig.use12h = !!s.use12h;
