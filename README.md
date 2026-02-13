@@ -1,26 +1,38 @@
+# My Schedule
 
-📅 My Schedule
+A web-based daily schedule organizer that allows users to plan, manage, and export their daily activities in a structured time grid.
 
-A simple web-based daily schedule organizer that helps users plan and manage their daily activities visually.
+---
 
-🔗 Live Demo: https://ali-a-r9.github.io/my-schedule/
+### 🔗 Live Demo
 
-🚀 Features
-🗓️ Interactive daily schedule grid
-➕ Add activity tasks
-✏️ Edit tasks
-🗑️ Delete tasks
-💾 Automatic saving using browser local storage
-📤 Export schedule as PNG image
-📱 Clean and responsive design
-🛠️ Built With
+https://ali-a-r9.github.io/my-schedule/
 
-HTML5
-CSS3
-JavaScript (ES6 Modules)
-Local Storage API
+---
 
-📂 Project Structure
+### 🚀 Features
+
+- Interactive daily schedule grid  
+- Add activity tasks  
+- Edit existing tasks  
+- Delete tasks  
+- Automatic saving using browser Local Storage  
+- Export schedule as a PNG image  
+- Responsive layout  
+
+---
+
+### 🛠️ Built With
+
+- HTML5  
+- CSS3  
+- JavaScript (ES6 Modules)  
+- Local Storage API  
+
+---
+
+### 📂 Project Structure
+
 ```
 my-schedule/
 │
@@ -29,13 +41,12 @@ my-schedule/
 ├── README.md           # Project documentation
 │
 └── js/
-    ├── app.js          # Main app logic
-    ├── main.js         # Entry point
-    ├── ui.js           # UI interactions
-    ├── grid.js         # Schedule grid rendering
-    ├── events.js       # Event handling
+    ├── app.js          # Core application logic
+    ├── main.js         # Application entry point
+    ├── ui.js           # UI rendering & interactions
+    ├── grid.js         # Schedule grid generation
+    ├── events.js       # Event listeners & handlers
     ├── storage.js      # Local storage management
-    ├── time.js         # Time utilities
+    ├── time.js         # Time utility functions
     └── export.js       # PNG export functionality
 ```
-
